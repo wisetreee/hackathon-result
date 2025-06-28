@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home, User, Favorites } from './pages';
+import { Header } from './components';
 
 function App() {
   return (

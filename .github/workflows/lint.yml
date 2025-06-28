@@ -1,8 +1,8 @@
-name: Lint
+name: CI
 on: push
 
 jobs:
-  lint:
+  lint-and-build:
     runs-on: ubuntu-latest
 
     steps:
@@ -11,9 +11,25 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: 22 
 
+      - name: Install dependencies (with cache)
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          
       - name: Install dependencies
-        run: npm install
+        run: npm ci 
+
+      - name: Verify installation
+        run: npm ls 
 
       - name: Run ESLint
         run: npm run lint
+
+      - name: Build project
+        run: npm run build 

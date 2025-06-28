@@ -1,0 +1,40 @@
+{
+	"users":[
+		{
+			"id": 1,
+			"firstName": "John",
+			"lastName": "Doe",
+			"social-media": {
+				"facebook": "https://www.facebook.com/",
+				"twitter": "https://twitter.com/",
+				"instagram": "https://www.instagram.com/",
+				"linkedin": "https://www.linkedin.com/"
+		
+			},
+			"role": "Developer",
+			"description":"Описание",
+			"hardSkills": {
+				"html": 50,
+				"css": 50,
+				"javascript": 50,
+				"react": 50	
+		},
+			"title":"Нижний текст",
+			"imageUrl": "./images/photo1.jpg"
+		}
+
+	],
+
+	"projects":[
+		{
+			//** Поиск по id все проектов юзера **//
+			"id": 1, 
+			"title": "Project 1",
+			"description": "Project 1 description",
+			"imageUrl": "./images/project1.jpg"
+		}
+	]
+
+
+
+}

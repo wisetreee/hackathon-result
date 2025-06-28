@@ -1,13 +1,20 @@
-import './App.css';
-import { Header } from './components';
 
-// npm run lint:fix
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Home, User, Favorites } from './pages';
 
 function App() {
   return (
     <>
       <Header />
-    </>
+   
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/user/:id" element={<User />} />
+      <Route path="/favorites" element={<Favorites />} />
+    </Routes>
+ </>
+
   );
 }
 

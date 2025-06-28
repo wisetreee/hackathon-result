@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .", 
-    "lint:strict": "eslint . -c eslint.strict.config.js",  
+    "lint":  "eslint . -c eslint.strict.config.js",  
     "lint:fix": "eslint . -c eslint.strict.config.js --fix",  
     "format": "prettier --write .",
     "preview": "vite preview"

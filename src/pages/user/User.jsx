@@ -1,7 +1,8 @@
 // import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Progress from './components/progress/Progress';
-import styles from './User.module.css';
+import styles from './User-page.module.css';
+
 export const User = ({ person }) => {
   // const { id } = useParams();
   const {

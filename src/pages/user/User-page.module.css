@@ -1,0 +1,89 @@
+.card {
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nameContainer {
+  margin-left: 20px;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #212529;
+}
+
+.age {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.content {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 5px;
+}
+
+.bio,
+.role {
+  margin: 0;
+  line-height: 1.6;
+  color: #343a40;
+}
+
+.socialLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.socialLink {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #e9ecef;
+  color: #495057;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.socialLink:hover {
+  background-color: #dee2e6;
+}
+
+.progress {
+  display: flex;
+}

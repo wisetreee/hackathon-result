@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Button } from '../button/button';
 import { H1 } from '../h1/H1';
 import Toggle from '../toggle/Toggle';
 import styles from './Header.module.css';

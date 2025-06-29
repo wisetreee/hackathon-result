@@ -1,0 +1,65 @@
+.barContainer {
+  width: 100%;
+  margin: 15px;
+}
+
+.label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.barBackground {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.percentText {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.circleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.circleProgress {
+  margin-bottom: 10px;
+}
+
+.circleBackground {
+  fill: none;
+  stroke: #f0f0f0;
+}
+
+.circleFill {
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s ease;
+}
+
+.circleText {
+  font-size: 16px;
+  font-weight: bold;
+  fill: #333;
+}

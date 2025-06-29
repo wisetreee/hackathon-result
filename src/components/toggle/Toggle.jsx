@@ -1,13 +1,7 @@
-import { useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './Toggle.module.css';
 
-const Toggle = () => {
-  const [isOn, setIsOn] = useState(false);
-
-  const handleToggle = () => {
-    setIsOn(!isOn);
-  };
-
+export const Toggle = ({ isOn, handleToggle }) => {
   return (
     <div className={styles.toggleContainer}>
       <label className={styles.toggleLabel}>
@@ -25,4 +19,7 @@ const Toggle = () => {
   );
 };
 
-export default Toggle;
+Toggle.propTypes = {
+  isOn: PropTypes.bool.isRequired,
+  handleToggle: PropTypes.func.isRequired,
+};

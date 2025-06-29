@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint":  "eslint . -c eslint.strict.config.js",  
-    "lint:fix": "eslint . -c eslint.strict.config.js --fix",  
+    "lint": "eslint . -c eslint.strict.config.js",
+    "lint:fix": "eslint . -c eslint.strict.config.js --fix",
     "format": "prettier --write .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.525.0",
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

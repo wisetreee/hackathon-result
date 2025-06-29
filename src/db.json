@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "age": "85",
+      "socialMedia": [
+        { "name": "facebook", "url": "https://www.facebook.com/" },
+        { "name": "twitter", "url": "https://twitter.com/" },
+        { "name": "instagram", "url": "https://www.instagram.com/" },
+        { "name": "linkedin", "url": "https://www.linkedin.com/" }
+      ],
+      "role": ["Developer", "SEO"],
+      "description": "'Красавчик, красавчик, красавчик, красавчик, красавчик, красавчик, красавчик, красавчик, красавчик. '",
+      "hardSkills": [
+        { "label": "html", "percent": 50 },
+        { "label": "css", "percent": 50 },
+        { "label": "javascript", "percent": 50 },
+        { "label": "react", "percent": 50 }
+      ],
+      "imageUrl": "https://basket-15.wbbasket.ru/vol2391/part239197/239197482/images/big/1.webp"
+    }
+  ],
+
+  "projects": [
+    {
+      "id": 1,
+      "title": "Project 1",
+      "description": "Project 1 description",
+      "imageUrl": "./images/project1.jpg"
+    }
+  ]
+}

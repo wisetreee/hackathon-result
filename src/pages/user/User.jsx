@@ -1,29 +1,56 @@
-// import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 import { Progress } from './components/progress/Progress';
+import { useServerRequest } from '../../hook/use-server-request';
 import styles from './User-page.module.css';
 
-export const User = ({ person }) => {
-  // const { id } = useParams();
+export const User = () => {
+  const { id } = useParams();
+
   const {
-    firstName = 'Владимир',
-    lastName = 'Евстафьев',
-    age = '32',
-    bio = 'Красавчик, красавчик, красавчик, красавчик, красавчик, красавчик, красавчик, красавчик, красавчик. ',
-    photo = 'https://basket-15.wbbasket.ru/vol2391/part239197/239197482/images/big/1.webp',
-    socialNetworks = [
-      { name: 'Google', url: 'https://www.google.com' },
-      { name: 'Mail', url: 'https://www.mail.ru' },
-    ],
-    projectRole = 'Самая важная, без меня все зачахнет',
-  } = person || {};
-  // должно браться из бд по id из params
+    data: user,
+    isLoading: userIsLoading,
+    error: userError,
+  } = useServerRequest('user', id);
+
+  const {
+    data: projects,
+    isLoading: projectsIsLoading,
+    error: projectsError,
+  } = useServerRequest('projects');
+
+  const isLoading = userIsLoading || projectsIsLoading;
+  const error = userError || projectsError;
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!user) {
+    return <div>User not found.</div>;
+  }
+
+  const {
+    firstName,
+    lastName,
+    age,
+    socialMedia,
+    role,
+    description: descriptionUser,
+    // hardSkills,
+    imageUrl: imageUrlUser,
+  } = user;
+
+  console.log(projects);
 
   return (
     <div className={styles.card}>
       <div className={styles.header}>
         <img
-          src={photo}
+          src={imageUrlUser}
           alt={`${firstName} ${lastName}`}
           className={styles.photo}
         />
@@ -34,23 +61,22 @@ export const User = ({ person }) => {
           <p className={styles.age}>Возраст: {age}</p>
         </div>
       </div>
-
       <div className={styles.content}>
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>О себе</h2>
-          <p className={styles.bio}>{bio}</p>
+          <p className={styles.bio}>{descriptionUser}</p>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Роль в проекте</h2>
-          <p className={styles.role}>{projectRole}</p>
+          <p className={styles.role}>{role}</p>
         </section>
 
-        {socialNetworks.length > 0 && (
+        {socialMedia.length > 0 && (
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Социальные сети</h2>
             <div className={styles.socialLinks}>
-              {socialNetworks.map((network, index) => (
+              {socialMedia.map((network, index) => (
                 <a
                   key={index}
                   href={network.url}
@@ -105,21 +131,4 @@ export const User = ({ person }) => {
       </div>
     </div>
   );
-};
-
-User.propTypes = {
-  person: PropTypes.shape({
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
-    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    bio: PropTypes.string,
-    photo: PropTypes.string,
-    socialNetworks: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-      })
-    ),
-    projectRole: PropTypes.string,
-  }),
 };

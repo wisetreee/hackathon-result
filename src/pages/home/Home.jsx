@@ -1,23 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import styled from './home.module.css'
+import { Header } from '../../components/Header/Header'
+import { Main } from '../../components/Main/Main'
 export const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/favorites">Favorites</Link>
-          </li>
-          <li>
-            <Link to="/user/1">User 1</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  );
-};
+	return (
+		<div
+			style={{
+				backgroundColor: '#F5F5F5',
+				height: '100%',
+			}}
+		>
+			<div className={styled.wrapper}>
+				<Header />
+				<Main />
+			</div>
+		</div>
+	)
+}

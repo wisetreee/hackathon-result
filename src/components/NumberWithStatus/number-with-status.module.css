@@ -1,0 +1,24 @@
+.mainItem {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 32px 8px 8px;
+	background-color: #ffffff;
+	border-radius: 56px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.mainItemTitle {
+	font-size: 24px;
+	font-weight: 500;
+	color: #333333;
+}
+.mainItemIcon {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: silver;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}

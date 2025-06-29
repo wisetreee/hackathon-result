@@ -1,3 +1,7 @@
+export * from './header/Header.jsx';
+export * from './h1/H1.jsx';
+export * from './button/Button.jsx';
+export * from './toggle/Toggle.jsx';
 export * from './ui/button/Button.jsx';
 export * from './ui/toggle/Toggle.jsx';
 export * from './ui/userCard/UserCard.jsx';

@@ -1,4 +1,5 @@
 // import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Progress from './components/progress/Progress';
 import styles from './User.module.css';
 
@@ -104,4 +105,21 @@ export const User = ({ person }) => {
       </div>
     </div>
   );
+};
+
+User.propTypes = {
+  person: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    bio: PropTypes.string,
+    photo: PropTypes.string,
+    socialNetworks: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      })
+    ),
+    projectRole: PropTypes.string,
+  }),
 };

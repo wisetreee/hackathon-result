@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './Progress.module.css';
 
 export const Progress = ({
@@ -67,4 +68,13 @@ export const Progress = ({
       </div>
     </div>
   );
+};
+
+Progress.propTypes = {
+  percent: PropTypes.number,
+  label: PropTypes.string,
+  color: PropTypes.string,
+  type: PropTypes.oneOf(['bar', 'circle']),
+  size: PropTypes.number,
+  strokeWidth: PropTypes.number,
 };

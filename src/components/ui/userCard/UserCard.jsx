@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './userCard.module.css';
+import styles from './UserCard.module.css';
 import { Button } from '../button/Button';
 import { ArrowUpRight } from 'lucide-react';
 import { Badge } from '../badge/Badge';

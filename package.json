@@ -6,16 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext .js,.jsx",
-    "lint:fix": "eslint . --ext .js,.jsx --fix",
+    "lint": "eslint . -c eslint.strict.config.js",
+    "lint:fix": "eslint . -c eslint.strict.config.js --fix",
     "format": "prettier --write .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.525.0",
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.6.3"
+    "react-router": "^7.6.3",
+    "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

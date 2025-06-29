@@ -17,7 +17,7 @@ export default defineConfig([
       reactRefresh.configs.vite,
     ],
     plugins: {
-      prettier, // Подключаем плагин
+      prettier,
     },
     languageOptions: {
       ecmaVersion: 2020,
@@ -30,7 +30,6 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-      'prettier/prettier': 'error', // ⚠️ Выключаем ошибки Prettier по умолчанию
     },
   },
 ]);

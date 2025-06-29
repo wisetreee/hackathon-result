@@ -1,1 +1,45 @@
+:root {
+  --main-1: hsl(0,0%,98%);
+  --content-text-main: hsl(226,18%,28%);
+  --content-text-secondary: hsl(226,11%,49%);
+  --content-bg-dark: hsl(0,2%,95%);
+  --content-bg-light: hsl(0,0%,100%);
+  --accent-blue: hsl(226,58%,62%);
+  --accent-orange: hsl(30,92%,53%);
+  --accent-purple: hsl(266,100%,64%);
+  --accent-yellow: hsl(51,92%,53%);
+  
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: var(--content-text-main);
+  };
+  h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--content-text-main);
+  }
+
+}
+
+prefers-color-scheme:light {
+  :root {
+    --main-1: hsl(0,0%,98%);
+    --content-text-main: hsl(226,18%,28%);
+    --content-text-secondary: hsl(226,11%,49%);
+    --content-bg-dark: hsl(0,2%,95%);
+    --content-bg-light: hsl(0,0%,100%);
+    --accent-blue: hsl(226,58%,62%);
+    --accent-orange: hsl(30,92%,53%);
+    --accent-purple: hsl(266,100%,64%);
+    --accent-yellow: hsl(51,92%,53%);
+  }
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-1);
+}
 

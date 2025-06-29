@@ -1,0 +1,70 @@
+.card {
+    max-width: 30rem;
+    height: 15rem;
+    padding: 16px;
+    background-color: var(--content-bg-light);
+    border-radius: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.user-content {
+    display: flex;
+}
+
+.imageAndHeaderData {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.circleImage {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--content-bg-dark);
+}
+.circleImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headerData {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.description {
+    color: var(--content-text-secondary);
+    margin: 0;
+}
+
+.tagsContainer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footerText {
+    color: var(--content-text-main);
+    display: -webkit-box;
+    line-clamp: 5;           
+    -webkit-line-clamp: 5;   
+    -webkit-box-orient: vertical;
+    overflow: hidden;        
+    text-overflow: ellipsis; 
+    
+    
+    word-wrap: break-word;   
+    word-break: break-word;  
+    
+    max-width: 100%;         
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
